@@ -1,9 +1,9 @@
-name: Test Vehicles Endpoint
+name: Test films Endpoint
 
 on: [push, pull_request]
 
 jobs:
-  test-Vehicles:
+  test-films:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,5 +17,5 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Run Test People
+      - name: Run Test films
         run: npm test -- -t "Deve visualizar informações de cadastro, quando buscar por uma pessoa existente"
