@@ -10,4 +10,8 @@ Cada teste foi implementado para garantir a integridade dos dados retornados e v
 - Verificação de dados de planetas, como Tatooine.
 - Validação de dados de naves, como a Estrela da Morte.
 - Verificação de rotas inexistentes para garantir a resposta correta de erro.
+<<<<<<< HEAD
 - Teste de limites de resultados em listas, entre outros.
+=======
+- Teste de limites de resultados em listas, entre outros.
+>>>>>>> 3d609f581221530f84a41e8c4a19c7bb8f3f94f0
