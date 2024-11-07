@@ -1,6 +1,6 @@
 name: Test films Endpoint
 
-  on: [push, pull_request]
+on: [push, pull_request]
 
 jobs:
   test-films:
