@@ -73,19 +73,16 @@ describe('Testes da API Star Wars (SWAPI)', () => {
     test('Deve retornar uma lista de espécies', async () => {
         const resposta = await request('https://swapi.dev/api').get('/species');
         expect(resposta.status).toBe(200);
-        expect(resposta.body.results).toBeDefined(); // Verifica se o campo `results` existe
-        expect(Array.isArray(resposta.body.results)).toBe(true); // Verifica se `results` é um array
-        expect(resposta.body.results.length).toBeGreaterThan(0); // Verifica se a lista não está vazia
-        expect(resposta.body.results[0].name).toBeDefined(); // Verifica se a primeira espécie tem um nome
+        expect(resposta.body.results).toBeDefined(); 
+        expect(Array.isArray(resposta.body.results)).toBe(true); 
+        expect(resposta.body.results.length).toBeGreaterThan(0); 
+        expect(resposta.body.results[0].name).toBeDefined(); 
     });
 });
 test('Deve receber uma mensagem de erro, quando buscar por uma pessoa inexistente', async () => {  
-  const resposta = await request('https://swapi.dev/api').get('/people/9999');  
-  // verifica se o status da requisição está retornando falso com status 404  
-  expect(resposta.status).toBe(404);  
-  // verifica o valor do corpo vazio não encontrado  
-  expect(resposta.body.detail).toBe('Not found');  
-  // podemos verificar também o corpo vazio como objeto  
+  const resposta = await request('https://swapi.dev/api').get('/people/9999');    
+  expect(resposta.status).toBe(404);    
+  expect(resposta.body.detail).toBe('Not found');    
   expect(resposta.body).toMatchObject({  
     detail: 'Not found'  
   });  
