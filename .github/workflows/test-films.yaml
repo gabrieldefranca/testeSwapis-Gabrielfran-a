@@ -1,12 +1,6 @@
 name: Test films Endpoint
 
-  on:  
-  push:  
-    branches:  
-      - main  
-  pull_request:  
-    branches:  
-      - main
+  on: [push, pull_request]
 
 jobs:
   test-films:
